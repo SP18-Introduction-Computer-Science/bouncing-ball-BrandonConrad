@@ -1,0 +1,33 @@
+float x=500;
+float y=500;
+float vx=7;
+float vy=7;
+float i=100;
+
+void setup() {
+  size(500,700);
+}
+
+void draw(){
+  background(0xFFFF00FF);
+ x+=vx;
+ if(x>width||x<0){
+  vx=vx*-1; 
+ }
+ y+=vy;
+ if(y>height||y<0){
+   vy=vy*-1;
+ }
+ ellipse(x,y,80,80);
+}
+
+void keyPressed(){
+  if(key=='w'){
+    fill(i);
+    i+=30;
+  }
+  else if (key=='s'){
+    i-=30;
+    fill(i); 
+  }
+}
